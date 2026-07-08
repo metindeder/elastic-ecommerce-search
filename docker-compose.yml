@@ -1,12 +1,29 @@
-version: '3.8'
-
 services:
   elasticsearch:
     image: docker.elastic.co/elasticsearch/elasticsearch:8.12.0
     container_name: es_ecommerce
     environment:
       - discovery.type=single-node
-      - xpack.security.enabled=false 
+      - xpack.security.enabled=false
       - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
     ports:
       - "9200:9200"
+    networks:
+      - ecommerce_net
+
+  web:
+    build: .
+    container_name: fastapi_ecommerce
+    ports:
+      - "8000:8000"
+    environment:
+      # FastAPI'ye Elasticsearch'ün yerini Docker ağı üzerindeki servis adıyla söylüyoruz
+      - ELASTICSEARCH_HOST=http://elasticsearch:9200
+    depends_on:
+      - elasticsearch # Önce veritabanının başlamasını sağla
+    networks:
+      - ecommerce_net
+
+networks:
+  ecommerce_net:
+    driver: bridge
