@@ -1,16 +1,16 @@
 # Elastic E-Commerce Search
-
-Bu proje, **Elasticsearch** ve **FastAPI** kullanarak geliştirilmiş bir e-ticaret arama motoru uygulamasıdır. 
-
-Uygulama, ürünlerin hızlı ve etkili bir şekilde aranabilmesi için Elasticsearch altyapısını kullanır ve sistemin kolayca ayağa kaldırılabilmesi için Docker ile yapılandırılmıştır.
-
-## 🚀 Kullanılan Teknolojiler
-
 <p align="left">
   <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker Logo" />
   <img src="https://img.shields.io/badge/Elasticsearch-005571?style=for-the-badge&logo=elasticsearch&logoColor=white" alt="Elasticsearch Logo" />
   <img src="https://img.shields.io/badge/Anaconda-44A833?style=for-the-badge&logo=anaconda&logoColor=white" alt="Anaconda Logo" />
 </p>
+
+Bu proje, **Elasticsearch** ve **FastAPI** kullanarak geliştirilmiş bir e-ticaret arama motoru uygulamasıdır. 
+
+Uygulama, ürünlerin hızlı ve etkili bir şekilde aranabilmesi için Elasticsearch altyapısını kullanır ve sistemin kolayca ayağa kaldırılabilmesi için Docker ile yapılandırılmıştır.
+
+
+
 
 ### Projede Yer Alan Diğer Araçlar:
 * **FastAPI:** Yüksek performanslı Python web framework'ü.
